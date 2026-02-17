@@ -1,0 +1,159 @@
+.about-page {
+    background: #1c1c1b;
+    min-height: 100vh;
+}
+
+.about-hero {
+    padding: 10rem 2rem 4rem;
+    text-align: center;
+    background: linear-gradient(135deg, #1c1c1b 0%, #24262b 100%);
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.about-hero p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.2rem;
+}
+
+.about-content {
+    padding: 4rem 0;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.about-story {
+    margin-bottom: 4rem;
+}
+
+.about-story h2 {
+    background: linear-gradient(135deg, #da1a07, #e63946);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.about-story p {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.about-values {
+    margin-bottom: 4rem;
+}
+
+.about-values h2 {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.values-subtitle {
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+.value-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover {
+    border-color: #da1a07;
+    transform: translateY(-5px);
+}
+
+.value-icon {
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    width: 50px;
+    height: 50px;
+}
+
+.value-icon svg {
+    stroke: url(#icon-gradient);
+    stroke-width: 1.5px;
+    width: 100%;
+    height: 100%;
+}
+
+.value-card h4 {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.value-card p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+}
+
+.about-experience {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    padding: 4rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.exp-item {
+    text-align: center;
+}
+
+.exp-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #972318
+}
+
+.exp-label {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2rem;
+    }
+
+    .about-experience {
+        gap: 2rem;
+    }
+
+    .exp-number {
+        font-size: 2rem;
+    }
+}
