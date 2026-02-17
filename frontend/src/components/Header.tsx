@@ -5,8 +5,14 @@ import { getSettings } from '../api/client';
 import './Header.css';
 
 const Header = () => {
+    const [settings, setSettings] = useState<Record<string, string>>({
+        site_name: 'Owllow',
+        facebook: 'https://facebook.com/ollow',
+        instagram: 'https://instagram.com/ollow',
+        linkedin: 'https://linkedin.com/company/ollow',
+        whatsapp: '+919876543210'
+    });
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [settings, setSettings] = useState<Record<string, string>>({});
     const location = useLocation();
 
     useEffect(() => {
@@ -21,7 +27,9 @@ const Header = () => {
         const fetchSettings = async () => {
             try {
                 const response = await getSettings();
-                setSettings(response.data);
+                if (response.data && Object.keys(response.data).length > 0) {
+                    setSettings(prev => ({ ...prev, ...response.data }));
+                }
             } catch (err) {
                 console.error('Error fetching settings:', err);
             }

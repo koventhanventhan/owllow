@@ -5,13 +5,22 @@ import { getSettings } from '../api/client';
 import './Footer.css';
 
 const Footer = () => {
-    const [settings, setSettings] = useState<Record<string, string>>({});
+    const [settings, setSettings] = useState<Record<string, string>>({
+        site_name: 'Owllow',
+        facebook: 'https://facebook.com/ollow',
+        instagram: 'https://instagram.com/ollow',
+        linkedin: 'https://linkedin.com/company/ollow',
+        whatsapp: '+919876543210',
+        email: 'contact@ollow.com'
+    });
 
     useEffect(() => {
         const fetchSettings = async () => {
             try {
                 const response = await getSettings();
-                setSettings(response.data);
+                if (response.data && Object.keys(response.data).length > 0) {
+                    setSettings(prev => ({ ...prev, ...response.data }));
+                }
             } catch (err) {
                 console.error('Error fetching settings:', err);
             }
