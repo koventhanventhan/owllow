@@ -10,6 +10,16 @@ const api = axios.create({
   },
 });
 
+// Reject non-JSON responses (e.g. HTML from Vercel SPA rewrites)
+// This ensures try/catch blocks catch these and use fallback data
+api.interceptors.response.use((response) => {
+  const contentType = response.headers['content-type'] || '';
+  if (!contentType.includes('application/json')) {
+    return Promise.reject(new Error('API not available (non-JSON response)'));
+  }
+  return response;
+});
+
 export interface Service {
   id: number;
   title: string;
