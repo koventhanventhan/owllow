@@ -1,24 +1,85 @@
-*.log
-.DS_Store
-.env
-.env.backup
-.env.production
-.phpactor.json
-.phpunit.result.cache
-/.fleet
-/.idea
-/.nova
-/.phpunit.cache
-/.vscode
-/.zed
-/auth.json
+# ===========================
+# Laravel
+# ===========================
+/vendor
 /node_modules
 /public/build
 /public/hot
 /public/storage
 /storage/*.key
 /storage/pail
-/vendor
+/bootstrap/cache/*
+!bootstrap/cache/.gitkeep
+
+# ===========================
+# Environment files
+# ===========================
+.env
+.env.backup
+.env.production
+.env.*.local
+
+# ===========================
+# IDE & Editor files
+# ===========================
+/.fleet
+/.idea
+/.nova
+/.vscode
+/.zed
+.editorconfig
+.phpactor.json
+
+# ===========================
+# Testing
+# ===========================
+.phpunit.result.cache
+/.phpunit.cache
+/phpunit.xml
+
+# ===========================
+# OS files
+# ===========================
+.DS_Store
+Thumbs.db
+*.log
+
+# ===========================
+# Auth & Keys
+# ===========================
+/auth.json
+
+# ===========================
+# Homestead
+# ===========================
 Homestead.json
 Homestead.yaml
-Thumbs.db
+
+# ===========================
+# Frontend (React/Vite)
+# ===========================
+/frontend/node_modules
+/frontend/dist
+/frontend/dist-ssr
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ===========================
+# Misc / Project specific
+# ===========================
+ngrok_url.txt
+tunnels.json
+settings_dump.json
+dump_settings.php
+repopulate_settings.php
+spline_preview.webp
+
+
+# ===========================
+# Gemini / Agent files
+# ===========================
+.gemini/
+.agent/
