@@ -76,8 +76,7 @@ settings_dump.json
 dump_settings.php
 repopulate_settings.php
 spline_preview.webp
-composer.lock
-/frontend/package-lock.json
+
 
 # ===========================
 # Gemini / Agent files
